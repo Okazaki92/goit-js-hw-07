@@ -29,10 +29,15 @@ const imgZoom = (event) => {
 	instance.show();
 };
 mainGallery.addEventListener("click", imgZoom);
+
 const openImg = document.querySelector(".basicLightbox");
-openImg.addEventListener("keydown", onEsc);
+const closeWindow = (e) => {
+	if (openImg != null) {
+		mainGallery.addEventListener("keydown", onEsc);
+	}
+};
 const onEsc = (e) => {
 	if (e.code === "Escape") {
-		instance.close()
+		instance.close();
 	}
 };
