@@ -32,5 +32,7 @@ mainGallery.addEventListener("click", imgZoom);
 const openImg = document.querySelector(".basicLightbox");
 openImg.addEventListener("keydown", onEsc);
 const onEsc = (e) => {
-	e.code === "Escape" ? instance.close() : instance.show();
+	if (e.code === "Escape") {
+		instance.close()
+	}
 };
